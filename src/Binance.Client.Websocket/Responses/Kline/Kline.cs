@@ -1,10 +1,17 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace Binance.Client.Websocket.Responses.Kline
 {
-    /// <summary>
+    ///
     /// The current klines/candlestick
-    /// </summary>
+    ///
+
+    public class KlineData : MessageBase
+    {
+        [JsonProperty("k")]
+        public Kline Kline { get; set; }
+    }
+
     public class Kline : MessageBase
     {
         /// <summary>
