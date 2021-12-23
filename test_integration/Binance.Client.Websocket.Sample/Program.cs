@@ -142,7 +142,7 @@ namespace Binance.Client.Websocket.Sample
 
             client.Streams.KlineStream.Subscribe(response =>
             {
-                var ob = response.Data;
+                var ob = response.Data.Kline;
                 Log.Information($"Kline [{ob.Symbol}] " +
                                 $"Kline start time: {ob.StartTime} " +
                                 $"Kline close time: {ob.CloseTime} " +
