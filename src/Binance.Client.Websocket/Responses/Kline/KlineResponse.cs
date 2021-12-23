@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Binance.Client.Websocket.Responses.Kline
 {
-    public class KlineResponse : ResponseBase<Kline>
+    public class KlineResponse : ResponseBase<KlineData>
     {
         internal static bool TryHandle(JObject response, ISubject<KlineResponse> subject)
         {
